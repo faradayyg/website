@@ -1,0 +1,13 @@
+*/.DS_Store
+.DS_Store
+.env
+*/.idea
+*/.vscode
+*/node_modules
+*/dist
+*/__pycache__
+*/.pytest_cache
+*/.mypy_cache
+*/.vs
+*/.nyc_output
+db.sqlite3

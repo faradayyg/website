@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="blog-page">
+{% for post in posts %}
+<article class="blog-post">
+    <a href="#"><h2>{{ post.title }} <br /><small>{{post.created_at}}</small></h2></a>
+    {% if post.thumbnail %}
+    <img src="{{ post.thumbnail.url }}" alt="{{ post.title }}" class="blog-image">
+    {% endif %}
+    <p class="blog-post">{{ post.description }}</p>
+    <a class="read-more read-more-button" href="{% url 'post_detail' post.id post.slug %}">Read more...</a>
+</article>
+{% endfor %}
+</section>
+{% endblock %}
+{% block footer %}
+{% endblock %}
+

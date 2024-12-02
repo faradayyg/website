@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65826189-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-65826189-2');
+	</script>
+	<base href="/">
+    <meta charset="utf-8" />
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/app.css' %}?v=1.00">
+    <meta name="description" content="Friday Godswill is a web developer currently working for hotels.ng, passionate about building content that scale">
+    <link href="/images/favicon.png" rel="shortcut icon" />
+    <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+
+    <link rel="canonical" href="http://fridaygodswill.com" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Friday Godswill - Full-Stack Web Developer" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="//fridaygodswill.com" />
+    <meta property="og:site_name" content="Friday Godswill" />
+    <meta property="og:image" content="//fridaygodswill.com/images/favicon.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@faradayyg" />
+    <meta name="twitter:title" content="Friday Godswill, Full-Stack Developer" />
+    <meta name="twitter:description" content="Friday Godswill is a web developer currently working for hotels.ng, passionate about building content that scale" />
+    <meta name="twitter:image" content="//fridaygodswill.com/images/favicon.png" />
+
+	<title>Friday Godswill</title>
+</head>
+<body>
+	<div class="wrap flex-center--all">
+		<div class="nav">
+			<div class="container">
+				<img class="brand" alt="Friday Godswill" src="{% static '/images/favicon.png' %}">
+				<ul class="">
+					<li><a href="/" class="loads_content">Home</a></li>
+					<li><a class="loads_content" href="/about">About</a></li>
+                    <li><a class="loads_content" href="/posts">Triflings</a></li>
+                    <li><a class="" href="https://fridayg.swish.ink/">Blog</a></li>
+				</ul>
+			</div>
+		</div>
+
+            <div class="{% block container_class %}textarea container small-container line-dbl{% endblock %}" align="center">
+			<div id="current">
+			    {% block content %}
+                {% endblock %}	
+			</div>
+			
+
+                {% block footer %}
+        <div class="social">
+				<ul>
+					<li>
+						<a target="_blank" rel="noopener" href='http://x.com/faradayyg'><img src="{% static '/images/icons/twitter.svg' %}" alt="twitter logo"></a>
+					</li>
+					<li>
+						<a target="_blank" rel="noopener" href="http://www.linkedin.com/in/godswill-friday-181476b1/"><img src="{% static '/images/icons/linkedin.svg' %}" alt="linkedin logo"></a>
+					</li>
+					<li>
+						<a target="_blank" rel="noopener" href="http://github.com/faradayyg"><img src="{% static '/images/icons/github.svg' %}" alt="github logo"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+        {% endblock %}
+</body>
+</html>
