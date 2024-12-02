@@ -75,6 +75,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "personal_django.wsgi.application"
 
+CSRF_TRUSTED_ORIGINS = ["https://fridaygodswill.com", "https://*.fridaygodswill.com"]
+
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
