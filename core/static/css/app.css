@@ -193,6 +193,7 @@ article.blog-post {
   font-size: 20px;
   font-weight: bold;
   color: #2980b9;
+  margin-bottom: 0px;
 }
 
 .blog-view {

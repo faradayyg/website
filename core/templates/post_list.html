@@ -6,7 +6,10 @@
 <p>Sometimes, I fiddle around with stuff and they get lost in the void. I have decided to share some of them on this page</p>
 {% for post in posts %}
 <article class="blog-post">
-    <a href="#"><h2>{{ post.title }} <br /><small>{{post.created_at}}</small></h2></a>
+        <a href="{% url 'post_detail' post.id post.slug %}">
+            <h2>{{ post.title }}</h2>
+        </a>
+        <small>{{post.created_at}}</small><br />
     {% if post.thumbnail %}
     <img src="{{ post.thumbnail.url }}" alt="{{ post.title }}" class="blog-image">
     {% endif %}
